@@ -7,7 +7,7 @@ import { Tours } from './components/Tours'
 const api = 'https://course-api.com/react-tours-project';
 
 interface deleteTourProps{
-  id: string;
+  deleteTour: (id: string) => void;
 }
 
 function App() {
@@ -42,6 +42,15 @@ function App() {
     return(
       <main>
         <Loading/>
+      </main>
+    )
+  }
+
+  if(tours.length === 0){
+    return(
+      <main>
+        <h2>No tours left</h2>
+        <button className='btn' onClick={() => fetchTours()}>Refresh</button>
       </main>
     )
   }

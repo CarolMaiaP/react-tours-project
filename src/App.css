@@ -111,3 +111,12 @@ img {
   background: #6b0d0d;
   color: #fff;
 }
+
+.btn {
+  background: #2a62fb;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}

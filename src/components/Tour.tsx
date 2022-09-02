@@ -6,7 +6,7 @@ interface TourProps{
   info: string,
   price: string,
   name: string,
-  deleteTour: Array<object>;
+  deleteTour: (id: string) => void;
 }
 
 export function Tour({id, image, info, price, name, deleteTour}: TourProps){

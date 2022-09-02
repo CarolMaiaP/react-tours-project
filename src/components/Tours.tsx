@@ -3,7 +3,7 @@ import { Tour } from "./Tour"
 
 interface ToursProps{
   tours: Array<object>;
-  deleteTour: Array<object>;
+  deleteTour: (id: string) => void;
 }
 
 export function Tours({tours, deleteTour}: ToursProps){
