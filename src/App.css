@@ -66,10 +66,48 @@ img {
   }
 }
 
+.tour-info .tour-price {
+  color: #2a62fb;
+}
+
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.principal-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem;
+}
+
+.single-tour .read-more-btn {
+  border: none;
+  cursor: pointer;
+  color: #2a62fb;
+  font-size: 1rem;
+}
+
+.single-tour .read-more-btn:hover {
+  color: #0404ff;
+}
+
+.single-tour .delete-btn {
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 10px 5px;
+  border: 2px solid #6b0d0d;
+  color: #6b0d0d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.single-tour .delete-btn:hover {
+  background: #6b0d0d;
+  color: #fff;
 }
