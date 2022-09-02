@@ -6,9 +6,18 @@ import { Tours } from './components/Tours'
 
 const api = 'https://course-api.com/react-tours-project';
 
+interface deleteTourProps{
+  id: string;
+}
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
+
+  function deleteTour(id:deleteTourProps){
+    const newTours = tours.filter(tour => tour.id !== id);
+    setTours(newTours);
+  }
 
   async function fetchTours(){
     setLoading(true)
@@ -39,7 +48,7 @@ function App() {
 
   return (
     <div className="Tours">
-      <Tours tours={tours}/>
+      <Tours tours={tours} deleteTour={deleteTour}/>
     </div>
   )
 }

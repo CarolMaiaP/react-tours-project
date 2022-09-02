@@ -5,10 +5,11 @@ interface TourProps{
   image: string, 
   info: string,
   price: string,
-  name: string
+  name: string,
+  deleteTour: Array<object>;
 }
 
-export function Tour({id, image, info, price, name}: TourProps){
+export function Tour({id, image, info, price, name, deleteTour}: TourProps){
   const [readMore, setReadMore] = useState(false)
   return(
     <div className="single-tour">
@@ -23,7 +24,7 @@ export function Tour({id, image, info, price, name}: TourProps){
             {readMore ? `show less` : `read more`}
           </button>
         </p>
-        <button className="delete-btn">not interested</button>
+        <button className="delete-btn" onClick={() => deleteTour(id)}>not interested</button>
       </div>
     </div>
   )

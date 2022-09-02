@@ -3,9 +3,10 @@ import { Tour } from "./Tour"
 
 interface ToursProps{
   tours: Array<object>;
+  deleteTour: Array<object>;
 }
 
-export function Tours({tours}: ToursProps){
+export function Tours({tours, deleteTour}: ToursProps){
   return(
     <section>
       <div className="title">
@@ -13,7 +14,7 @@ export function Tours({tours}: ToursProps){
       </div>
       <div>
         {tours.map((tour)=>{
-          return <Tour key={tour.id}{...tour}></Tour>
+          return <Tour key={tour.id}{...tour} deleteTour={deleteTour}></Tour>
         })}
       </div>
     </section>
